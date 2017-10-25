@@ -1,31 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rkrief <raphaelkriefbm@gmail.com>          +#+  +:+       +#+        */
+/*   By: Raphael <raphaelkriefbm@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/07 18:44:56 by rkrief            #+#    #+#             */
-/*   Updated: 2017/10/25 12:02:11 by Raphael          ###   ########.fr       */
+/*   Created: 2017/10/25 11:47:06 by Raphael           #+#    #+#             */
+/*   Updated: 2017/10/25 11:57:09 by Raphael          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strcat(char *s1, const char *s2)
+char	*strdup(const char s1)
 {
-	int	i;
-	int	j;
-
-	j = 0;
-	i = 0;
-	while (s1)
-		i++;
-	while (s2)
-	{
-		s1[i] = s2[j];
-		i++;
-		j++;
-	}
-	s1[i] = '\0';
-	return(s1);
-}
-			
+	

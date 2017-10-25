@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkrief <raphaelkriefbm@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/07 18:44:56 by rkrief            #+#    #+#             */
-/*   Updated: 2017/08/21 23:48:56 by rkrief           ###   ########.fr       */
+/*   Updated: 2017/10/25 11:57:51 by Raphael          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strcpy(char *dest, const char *src)
+char	*strcpy(char *dst, const char *src)
 {
 	int	i;
 
 	i = 0;
 	while(src[i] != '\0')
 	{
-			dest[i] = src[i];
+			dst[i] = src[i];
 			i++;
 	}
-	dest[i] = '\0';
-	return(dest);
+	dst[i] = '\0';
+	return(dst);
 }
 
