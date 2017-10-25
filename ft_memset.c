@@ -6,14 +6,11 @@
 /*   By: Raphael <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 16:10:18 by Raphael           #+#    #+#             */
-/*   Updated: 2017/10/24 12:33:02 by Raphael          ###   ########.fr       */
+/*   Updated: 2017/10/25 11:26:25 by Raphael          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//void	*ft_memset(void *b, int c, size_t len)
-
 #include <string.h>
-#include <stdio.h>
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -22,23 +19,27 @@ void	ft_putchar(char c)
 	return ;
 }
 
-int main(void)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	
-	void *b = "coucou";
-	int c = 5;
-	size_t len = 3;
-	size_t	i;
-	ft_putchar('A');
+	unsigned char *ptr;
+	size_t		  i;
+
 	i = 0;
+	ptr = (unsigned char*)b;
 	while(len > 0)
 		{
-			ft_putchar('1');
-			((char*)b)[i++] = (unsigned char)c;
+			ptr[i++] = (unsigned char)c;
 			len--;
-			ft_putchar('B');
-			ft_putchar('\n');
 		}
-		printf("%s\n", b);
-		return(0);
+		return (b);
+}
+
+int	main()
+{
+	void *b = "coucou";
+	int	c = 5;
+	size_t len = 8;
+	
+	ft_memset(b,c,len);
+	return (0);
 }
