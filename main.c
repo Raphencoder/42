@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Raphael <raphaelkriefbm@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/24 12:49:10 by Raphael           #+#    #+#             */
-/*   Updated: 2017/11/02 13:26:13 by Raphael          ###   ########.fr       */
+/*   Created: 2017/11/02 13:17:38 by Raphael           #+#    #+#             */
+/*   Updated: 2017/11/02 13:29:49 by Raphael          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
+#include <stdio.h>
 
-#include <string.h>
-
-void	*ft_memset(void *b, int c, size_t len);
-
-typedef struct s_list
+int			main()
 {
-		void *content;
-		size_t content_size;
-		struct s_list *next;
-} t_list;
-
-#endif
+	char	tab[10]="bonjour22";
+	char	value;
+	
+	value = '$';
+	ft_memset(tab,value,5);
+	printf("%s\n", tab);
+	return (0);
+}
