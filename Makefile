@@ -6,7 +6,7 @@
 #    By: Raphael <raphaelkriefbm@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/26 13:55:42 by Raphael           #+#    #+#              #
-#    Updated: 2017/11/02 13:07:52 by Raphael          ###   ########.fr        #
+#    Updated: 2017/11/02 13:12:27 by Raphael          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ $(NAME) : $(OBJ)
 					@ar rc $(NAME) $(OBJ)
 
 %.o : %.c
-					gcc -c $< -o $@
+					gcc -c $(FLAG) $< -o $@
 		
 clean : 			rm -rf $(OBJ)
 		
