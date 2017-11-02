@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Raphael <raphaelkriefbm@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/02 13:17:38 by Raphael           #+#    #+#             */
-/*   Updated: 2017/11/02 14:24:24 by Raphael          ###   ########.fr       */
+/*   Created: 2017/11/02 14:15:52 by Raphael           #+#    #+#             */
+/*   Updated: 2017/11/02 14:44:32 by Raphael          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int			main()
+void		ft_bzero(void *s, size_t n)
 {
-	char	tab[10]="bonjour22";
-	char	value;
+	int		i;
 	
-	value = '$';
-	ft_bzero(tab, 5);
-//	ft_memset(tab,value,5);
-	printf("%s\n", tab);
-	return (0);
+	i = 0;
+	while (n > 0)
+	{
+		((char*)s)[i++] = '\0';
+		n--;
+	}
 }

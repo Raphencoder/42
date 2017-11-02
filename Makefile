@@ -6,7 +6,7 @@
 #    By: Raphael <raphaelkriefbm@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/26 13:55:42 by Raphael           #+#    #+#              #
-#    Updated: 2017/11/02 13:12:27 by Raphael          ###   ########.fr        #
+#    Updated: 2017/11/02 14:46:59 by Raphael          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ $(NAME) : $(OBJ)
 %.o : %.c
 					gcc -c $(FLAG) $< -o $@
 		
-clean : 			rm -rf $(OBJ)
+clean : 			
+					rm -rf $(OBJ)
 		
 fclean :			clean 
 					rm -rf $(NAME)
