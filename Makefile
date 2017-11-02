@@ -6,7 +6,7 @@
 #    By: Raphael <raphaelkriefbm@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/26 13:55:42 by Raphael           #+#    #+#              #
-#    Updated: 2017/10/26 15:13:03 by Raphael          ###   ########.fr        #
+#    Updated: 2017/11/02 13:07:52 by Raphael          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,24 +14,21 @@ NAME = 				libft.a
 
 SRC =				ft_putchar.c \
 					ft_putstr.c \
-					ft_memset.c \
+					ft_memset.c 
 
 OBJ =				$(SRC: .c=.o)
 
-// FLAG : 			-Wall -Werror -Wextra
+FLAG = 				-Wall -Werror -Wextra
 
-HEADER = libft.h
+HEADER = 			libft.h
 
+all	:				$(NAME)
 
-COMMAND =			
-				
-		
-all :				
-					gcc -c $(SRC) $(HEADER)
-					ar rc $(NAME) $(OBJ)
-					ranlib $(NAME)
+$(NAME) : $(OBJ)
+					@ar rc $(NAME) $(OBJ)
 
-		
+%.o : %.c
+					gcc -c $< -o $@
 		
 clean : 			rm -rf $(OBJ)
 		
@@ -40,4 +37,3 @@ fclean :			clean
 
 re : 				fclean all
 
-		
