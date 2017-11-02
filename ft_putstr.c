@@ -6,13 +6,13 @@
 /*   By: Raphael <raphaelkriefbm@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 15:02:17 by Raphael           #+#    #+#             */
-/*   Updated: 2017/10/26 15:08:00 by Raphael          ###   ########.fr       */
+/*   Updated: 2017/11/02 14:57:16 by Raphael          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-#include "LIBFT.H"
+#include "libft.h"
 
 void	ft_putstr(char *str)
 {

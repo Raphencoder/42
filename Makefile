@@ -6,7 +6,7 @@
 #    By: Raphael <raphaelkriefbm@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/26 13:55:42 by Raphael           #+#    #+#              #
-#    Updated: 2017/11/02 14:46:59 by Raphael          ###   ########.fr        #
+#    Updated: 2017/11/02 14:55:46 by Raphael          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC =				ft_putchar.c \
 					ft_putstr.c \
 					ft_memset.c 
 
-OBJ =				$(SRC: .c=.o)
+OBJ =				$(SRC:.c=.o)
 
 FLAG = 				-Wall -Werror -Wextra
 
