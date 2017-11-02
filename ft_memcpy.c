@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Raphael <raphaelkriefbm@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/24 12:49:10 by Raphael           #+#    #+#             */
-/*   Updated: 2017/11/02 15:39:28 by Raphael          ###   ########.fr       */
+/*   Created: 2017/11/02 15:07:10 by Raphael           #+#    #+#             */
+/*   Updated: 2017/11/02 15:49:58 by Raphael          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-#include <string.h>
-
-void	*ft_memcpy(void *dst, void *src, size_t n);
-void	ft_putchar(char c);
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
-typedef struct s_list
+void		*ft_memcpy(void *dst, void *src, size_t n)
 {
-		void *content;
-		size_t content_size;
-		struct s_list *next;
-} t_list;
+	int		i;
+	char	*ptr;
+	char	*ptrs;
 
-#endif
+	i = n;
+	ptr = (char*)dst;
+	ptrs = (char*)src;
+	while (n > 0)
+	{
+		*ptr++ = *ptrs++;
+		n--;
+	}
+	while (i > 0)
+	{
+			ptr--;
+			i--;
+	}
+	return (ptr);
+}
+
